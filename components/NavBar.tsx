@@ -1,8 +1,8 @@
 import Link from "next/link"
 
-export default function NavBar() {
+export default function NavBar( {code} : {code: boolean} ) {
   return (
-    <div className="flex items-center justify-between w-full h-16 px-4 bg-white">
+    <div className="flex items-center justify-between w-full h-16 px-4 bg-[#fcfcfc]">
       <div className="flex">
         <Link href="/" className="px-4 text-[#1a1b1c] font-semibold text-sm/4 uppercase">
           Skintrinsic
@@ -10,7 +10,7 @@ export default function NavBar() {
         <img src="/intro.svg" alt="" />
       </div>
       <div>
-        <img src="/enter-code.svg" alt="" />
+        {code && <img src="/enter-code.svg" alt="" />}
       </div>
     </div>
   );

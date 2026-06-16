@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc]">
-      <NavBar />
+    <div className="relative flex flex-col h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
+      <NavBar code={true} />
 
       <div className="absolute inset-0 flex items-center justify-center">
       
@@ -16,7 +16,7 @@ export default function Home() {
             <img src="/discover-ai.svg" alt="" className="absolute left-8 top-1/2 -translate-y-1/2" />
           </div>
 
-          <div className="text-center font-thin text-9xl leading-30 tracking-[-7%]">
+          <div className="text-center font-light text-9xl leading-30 tracking-[-7%]">
             Sophisticated
             <br />
             skincare
