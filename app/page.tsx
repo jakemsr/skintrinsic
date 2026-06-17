@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="relative flex flex-col h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
-      <NavBar code={true} />
+      <NavBar code={true} location="intro" />
 
       <div className="absolute inset-0 flex items-center justify-center">
       
