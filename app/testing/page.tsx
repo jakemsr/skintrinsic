@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import NavBar from "@/components/NavBar"
+import NavBar from "@/components/NavBar";
+import LeftButton from "@/components/LeftButton";
+import RightButton from "@/components/RightButton";
 
 
 export default function Testing() {
@@ -175,14 +177,14 @@ export default function Testing() {
 
       <div className="absolute left-8 bottom-8">
         <Link href="/">
-          <img src="/back.svg" alt="" />
+          <LeftButton selfHover={true} text="back" />
         </Link>
       </div>
 
       {showProceed && (
         <div className="absolute right-8 bottom-8">
           <Link href="/result">
-            <img src="/proceed.svg" alt="" />
+            <RightButton selfHover={true} text="proceed" />
           </Link>
         </div>
       )}
