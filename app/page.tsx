@@ -1,31 +1,147 @@
-import NavBar from "@/components/NavBar"
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import NavBar from "@/components/NavBar"
 
 
 export default function Home() {
+
+  const [isHoveredRight, setIsHoveredRight] = useState(false);
+  const [isHoveredLeft, setIsHoveredLeft] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+
   return (
     <div className="relative flex flex-col h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
+
       <NavBar code={true} location="intro" />
 
       <div className="absolute inset-0 flex items-center justify-center">
-      
-        <div className="flex w-full items-center justify-between">
 
-          <div className="relative w-75.25 h-150.5">
-            <img src="/landing-rect-left.svg" alt="" className="w-full h-full" />
-            <img src="/discover-ai.svg" alt="" className="absolute left-8 top-1/2 -translate-y-1/2" />
+        <div className="relative flex w-full items-center justify-between">
+
+          <div className={`relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredRight && 'opacity-0'}`}>
+            <div className="relative w-screen h-screen">
+              <img
+                src="/testing-inner-rect.svg"
+                alt=""
+                className="absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2"
+              />
+              <img
+                src="/testing-mid-rect.svg"
+                alt=""
+                className={`absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2
+                  ${isHoveredLeft ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500
+                  `}
+              />
+              <img
+                src="/testing-outer-rect.svg"
+                alt=""
+                className={`absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2
+                  ${isHoveredLeft ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000
+                  `}
+              />
+            </div>
+            <div
+              className="absolute left-8 top-1/2 -translate-y-1/2 cursor-pointer"
+              onMouseEnter={() => setIsHoveredLeft(true)}
+              onMouseLeave={() => setIsHoveredLeft(false)}
+            >
+              <div className="relative w-40 h-12">
+                <img
+                  src="polygon-left.svg"
+                  alt=""
+                  className="absolute top-1/2 -translate-y-1/2 left-4"
+                />
+                <img
+                  src="rect-outer-line.svg"
+                  alt=""
+                  className={`absolute top-1/2 -translate-y-1/2 ${isHoveredLeft && 'animate-ping [animation-duration:1500ms]'}`}
+                />
+                <div
+                  className="absolute top-1/2 -translate-y-1/2 left-14 uppercase font-semibold text-sm leading-4 tracking-[-2%]">
+                  discover a.i.
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <div className="text-center font-light text-9xl leading-30 tracking-[-7%]">
-            Sophisticated
-            <br />
-            skincare
+
+          <div
+            className={`absolute flex items-center justify-center font-light text-[120px] leading-30 tracking-[-7%] -translate-y-1/2 transition-all duration-1000 ease-in-out
+              ${isHoveredRight ? 'left-8' :
+                isHoveredLeft ? 'left-full -translate-x-full -ml-8' :
+                  'left-1/2 -translate-x-1/2'}              
+            `}
+          >
+            <span className={`transition-opacity duration-2000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+              Sophisticated
+            </span>
           </div>
 
-          <div className="relative w-75.25 h-150.5">
-            <img src="/landing-rect-right.svg" alt="" className="w-full h-full" />
-            <Link href="/testing">
-              <img src="/take-test.svg" alt="" className="absolute right-8 top-1/2 -translate-y-1/2" />
+          <div
+            className={`absolute flex items-center justify-center font-light text-[120px] leading-30 tracking-[-7%] translate-y-1/2 transition-all duration-1000 ease-in-out
+              ${isHoveredRight ? 'left-8' :
+                isHoveredLeft ? 'left-full -translate-x-full -ml-8' :
+                  'left-1/2 -translate-x-1/2'}
+            `}
+          >
+            <span className={`transition-opacity duration-2000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+              skincare
+            </span>
+          </div>
+
+
+          <div className={`relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredLeft && 'opacity-0'}`}>
+            <div className="relative w-screen h-screen">
+              <img
+                src="/testing-inner-rect.svg"
+                alt=""
+                className="absolute top-1/2 -translate-y-1/2"
+              />
+              <img
+                src="/testing-mid-rect.svg"
+                alt=""
+                className={`absolute top-1/2 -translate-y-1/2 -translate-x-10
+                  ${isHoveredRight ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500
+                  `}
+              />
+              <img
+                src="/testing-outer-rect.svg"
+                alt=""
+                className={`absolute top-1/2 -translate-y-1/2 -translate-x-20
+                  ${isHoveredRight ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000
+                  `}
+              />
+            </div>
+            <Link
+              href="/testing"
+              onMouseEnter={() => setIsHoveredRight(true)}
+              onMouseLeave={() => setIsHoveredRight(false)}
+              className="absolute right-8 top-1/2 -translate-y-1/2 cursor-pointer"
+            >
+              <div className="relative w-40 h-12">
+                <img
+                  src="polygon-right.svg"
+                  alt=""
+                  className="absolute top-1/2 -translate-y-1/2 right-4"
+                />
+                <img
+                  src="rect-outer-line.svg"
+                  alt=""
+                  className={`absolute top-1/2 -translate-y-1/2 right-0 ${isHoveredRight && 'animate-ping [animation-duration:1500ms]'}`}
+                />
+                <div
+                  className="absolute top-1/2 -translate-y-1/2 right-14 uppercase font-semibold text-sm leading-4 tracking-[-2%]">
+                  take test
+                </div>
+              </div>
             </Link>
           </div>
 
@@ -34,8 +150,8 @@ export default function Home() {
       </div>
 
       <div className="absolute left-8 bottom-8 text-sm leading-6 font-normal uppercase w-79 h-18">
-        Skinstric developed an A.I. that creates 
-        a highly-personalised routine tailored to 
+        Skinstric developed an A.I. that creates
+        a highly-personalised routine tailored to
         what your skin needs.
       </div>
 
