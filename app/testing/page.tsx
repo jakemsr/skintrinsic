@@ -110,7 +110,7 @@ export default function Testing() {
       <div className="absolute inset-0 w-full flex items-center justify-center">
 
         <div className="relative w-190.5 h-190.5">
-          <img src="/testing-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_70s_linear_infinite]" />
+          <img src="/testing-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_75s_linear_infinite]" />
           <img src="/testing-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]"/>
           <img src="/testing-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
 
