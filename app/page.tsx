@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import NavBar from "@/components/NavBar"
+import LeftButton from "@/components/LeftButton";
+import RightButton from "@/components/RightButton";
 
 
 export default function Home() {
@@ -36,14 +38,14 @@ export default function Home() {
                 src="/testing-mid-rect.svg"
                 alt=""
                 className={`absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2
-                  ${isHoveredLeft ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500
+                  ${isHoveredLeft ? 'opacity-100' : 'opacity-0'} transition-opacity duration-750 duration-1500
                   `}
               />
               <img
                 src="/testing-outer-rect.svg"
                 alt=""
                 className={`absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2
-                  ${isHoveredLeft ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000
+                  ${isHoveredLeft ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1500 duration-750
                   `}
               />
             </div>
@@ -52,23 +54,7 @@ export default function Home() {
               onMouseEnter={() => setIsHoveredLeft(true)}
               onMouseLeave={() => setIsHoveredLeft(false)}
             >
-              <div className="relative w-40 h-12">
-                <img
-                  src="polygon-left.svg"
-                  alt=""
-                  className="absolute top-1/2 -translate-y-1/2 left-4"
-                />
-                <img
-                  src="rect-outer-line.svg"
-                  alt=""
-                  className={`absolute top-1/2 -translate-y-1/2 ${isHoveredLeft && 'animate-ping [animation-duration:1500ms]'}`}
-                />
-                <div
-                  className="absolute top-1/2 -translate-y-1/2 left-14 uppercase font-semibold text-sm leading-4 tracking-[-2%]">
-                  discover a.i.
-                </div>
-              </div>
-
+              <LeftButton selfHover={false} isHovered={isHoveredLeft} text="discover a.i." />
             </div>
           </div>
 
@@ -109,14 +95,14 @@ export default function Home() {
                 src="/testing-mid-rect.svg"
                 alt=""
                 className={`absolute top-1/2 -translate-y-1/2 -translate-x-10
-                  ${isHoveredRight ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500
+                  ${isHoveredRight ? 'opacity-100' : 'opacity-0'} transition-opacity duration-750 duration-1500
                   `}
               />
               <img
                 src="/testing-outer-rect.svg"
                 alt=""
                 className={`absolute top-1/2 -translate-y-1/2 -translate-x-20
-                  ${isHoveredRight ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000
+                  ${isHoveredRight ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1500 duration-750
                   `}
               />
             </div>
@@ -126,22 +112,7 @@ export default function Home() {
               onMouseLeave={() => setIsHoveredRight(false)}
               className="absolute right-8 top-1/2 -translate-y-1/2 cursor-pointer"
             >
-              <div className="relative w-40 h-12">
-                <img
-                  src="polygon-right.svg"
-                  alt=""
-                  className="absolute top-1/2 -translate-y-1/2 right-4"
-                />
-                <img
-                  src="rect-outer-line.svg"
-                  alt=""
-                  className={`absolute top-1/2 -translate-y-1/2 right-0 ${isHoveredRight && 'animate-ping [animation-duration:1500ms]'}`}
-                />
-                <div
-                  className="absolute top-1/2 -translate-y-1/2 right-14 uppercase font-semibold text-sm leading-4 tracking-[-2%]">
-                  take test
-                </div>
-              </div>
+              <RightButton selfHover={false} isHovered={isHoveredRight} text="take test" />
             </Link>
           </div>
 
