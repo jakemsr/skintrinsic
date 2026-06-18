@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
+import LeftButton from "@/components/LeftButton";
 
 
 export default function Result() {
@@ -171,7 +172,7 @@ export default function Result() {
 
       <div className="absolute left-8 bottom-8">
         <Link href="/testing">
-          <img src="/back.svg" alt="" />
+          <LeftButton selfHover={true} text="back" />
         </Link>
       </div>
 
