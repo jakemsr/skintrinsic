@@ -37,15 +37,15 @@ export default function Home() {
               <img
                 src="/testing-mid-rect.svg"
                 alt=""
-                className={`absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2
-                  ${isHoveredLeft ? 'opacity-100' : 'opacity-0'} transition-opacity duration-750 duration-1500
+                className={`absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 transition-opacity
+                  ${isHoveredLeft ? 'opacity-100 duration-750' : 'opacity-0 duration-1500'}
                   `}
               />
               <img
                 src="/testing-outer-rect.svg"
                 alt=""
-                className={`absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2
-                  ${isHoveredLeft ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1500 duration-750
+                className={`absolute left-0 -translate-x-1/2 top-1/2 -translate-y-1/2 transition-opacity
+                  ${isHoveredLeft ? 'opacity-100 duration-1500' : 'opacity-0 duration-750'}
                   `}
               />
             </div>
@@ -94,15 +94,15 @@ export default function Home() {
               <img
                 src="/testing-mid-rect.svg"
                 alt=""
-                className={`absolute top-1/2 -translate-y-1/2 -translate-x-10
-                  ${isHoveredRight ? 'opacity-100' : 'opacity-0'} transition-opacity duration-750 duration-1500
+                className={`absolute top-1/2 -translate-y-1/2 -translate-x-10 transition-opacity
+                  ${isHoveredRight ? 'opacity-100 duration-750' : 'opacity-0 duration-1500'}
                   `}
               />
               <img
                 src="/testing-outer-rect.svg"
                 alt=""
-                className={`absolute top-1/2 -translate-y-1/2 -translate-x-20
-                  ${isHoveredRight ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1500 duration-750
+                className={`absolute top-1/2 -translate-y-1/2 -translate-x-20 transition-opacity
+                  ${isHoveredRight ? 'opacity-100 duration-1500' : 'opacity-0 duration-750'}
                   `}
               />
             </div>
