@@ -111,7 +111,7 @@ export default function Testing() {
 
         <div className="relative w-190.5 h-190.5">
           <img src="/testing-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_75s_linear_infinite]" />
-          <img src="/testing-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]"/>
+          <img src="/testing-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]" />
           <img src="/testing-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
 
           {submitting ? (
@@ -181,13 +181,14 @@ export default function Testing() {
         </Link>
       </div>
 
-      {showProceed && (
-        <div className="absolute right-8 bottom-8">
-          <Link href="/result">
-            <RightButton selfHover={true} text="proceed" />
-          </Link>
-        </div>
-      )}
+      <div
+        className={`absolute bottom-8 transition-all duration-1500
+          ${showProceed ? 'right-8 opacity-100' : 'right-1/4 opacity-0'}`}
+        >
+        <Link href="/result">
+          <RightButton selfHover={true} text="proceed" />
+        </Link>
+      </div>
 
     </div>
   );
