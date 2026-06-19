@@ -156,13 +156,12 @@ export default function Result() {
             <div className="relative w-130 h-120.5 ml-8">
               <Spinners />
 
-              <div onClick={handleGalleryIconClick}>
-                <img
-                  src="/gallery-icon.svg"
-                  alt=""
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                />
-              </div>
+              <img
+                src="/gallery-icon.svg"
+                alt=""
+                onClick={handleGalleryIconClick}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              />
               <img
                 src="/gallery-pointer.svg"
                 alt=""
