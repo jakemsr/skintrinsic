@@ -119,8 +119,11 @@ export default function Testing() {
               <div className="text-2xl mb-4">
                 Processing submission
               </div>
-              <div>
-                ...
+              <div className="flex items-center justify-center space-x-2">
+                <span className="sr-only">Loading...</span>
+                <div className="h-3 w-3 animate-bounce rounded-full bg-[#E1E1E2] [animation-delay:-0.3s]"></div>
+                <div className="h-3 w-3 animate-bounce rounded-full bg-[#E1E1E2] [animation-delay:-0.15s]"></div>
+                <div className="h-3 w-3 animate-bounce rounded-full bg-[#E1E1E2]"></div>
               </div>
             </div>
           ) : (
