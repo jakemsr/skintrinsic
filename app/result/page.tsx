@@ -146,8 +146,16 @@ export default function Result() {
             <div className="relative w-130 h-120.5 ml-8">
               <Spinners />
 
-              <img src="/camera-icon.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-              <img src="/camera-pointer.svg" alt="" className="absolute top-1/2 left-1/2 translate-x-10 -translate-y-25" />
+              <img
+                src="/camera-icon.svg"
+                alt=""
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              />
+              <img
+                src="/camera-pointer.svg"
+                alt=""
+                className="absolute top-1/2 left-1/2 translate-x-10 -translate-y-25"
+              />
               <div className="absolute top-31 left-93 text-sm leading-6 uppercase w-42 h-12">
                 Allow A.I. <br />to Scan Your Face
               </div>
