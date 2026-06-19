@@ -53,7 +53,6 @@ export default function Result() {
 
       if (data.success === true) {
         localStorage.setItem('image_analysis', JSON.stringify(data.data));
-        alert("Image successfully analysed!");
         router.push("/select");
       } else {
         setError(data.message);
@@ -121,6 +120,20 @@ export default function Result() {
 
 
   return (
+    <>
+      {processing ? (
+        <div className="relative w-screen h-screen flex items-center justify-center">
+
+          <Spinners />
+
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold uppercase tracking-[-2%]">
+            Preparing your analysis ...
+          </div>
+
+       </div>
+
+      ) : (
+
     <div className="relative flex flex-col h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
       <NavBar code={false} location="intro" />
 
@@ -177,5 +190,7 @@ export default function Result() {
       </div>
 
     </div>
+    )}
+</>
   );
 }
