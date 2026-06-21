@@ -161,7 +161,7 @@ export default function Result() {
     }
 
     window.addEventListener('resize', handleResize);
-    
+
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -193,13 +193,13 @@ export default function Result() {
 
           <div
             className={`absolute bottom-8 transition-all
-              ${complete ? 'right-8 opacity-100 duration-1500': 'right-1/4 opacity-0 duration-0 pointer-events-none'}`}
+              ${complete ? 'right-8 opacity-100 duration-1500' : 'right-1/4 opacity-0 duration-0 pointer-events-none'}`}
           >
             <Link href="/select">
               <RightButton selfHover={true} text="proceed" />
             </Link>
           </div>
- 
+
         </div>
       ) : (
         cameraCapture ? (
@@ -238,7 +238,7 @@ export default function Result() {
                   </div>
 
                   <button
-                    onClick={() => {setCameraCapture(false); setCameraReady(false)}}
+                    onClick={() => { setCameraCapture(false); setCameraReady(false) }}
                     className="absolute bottom-8 left-8"
                   >
                     <LeftButton selfHover={true} text="" light={true} />
@@ -266,7 +266,7 @@ export default function Result() {
                         onClick={() => setImgSrc("")}
                       >
                         <LeftButton selfHover={true} text="back" light={true} />
-                     </div>
+                      </div>
 
                     </>
                   )}
@@ -291,9 +291,9 @@ export default function Result() {
 
             <div
               className={`absolute bottom-8 transition-all
-                ${imgSrc ? 'right-8 opacity-100 duration-1500 cursor-pointer': 'right-1/4 opacity-0 duration-0 pointer-events-none'}`}
+                ${imgSrc ? 'right-8 opacity-100 duration-1500 cursor-pointer' : 'right-1/4 opacity-0 duration-0 pointer-events-none'}`}
             >
-              <div onClick={() => {setProcessing(true); imgSrc && setBase64Image(imgSrc)}}>
+              <div onClick={() => { setProcessing(true); imgSrc && setBase64Image(imgSrc) }}>
                 <RightButton selfHover={true} text="proceed" light={true} />
               </div>
             </div>
@@ -301,96 +301,96 @@ export default function Result() {
           </>
         ) : (
 
-        <div className="relative flex flex-col h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
-          <NavBar code={false} location="intro" />
+          <div className="relative flex flex-col h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
+            <NavBar code={false} location="intro" />
 
-          <div className="w-56.75 h-6 uppercase font-semibold text-base leading-6 ml-8 mt-4">
-            to start analysis
-          </div>
-
-          <div className="absolute inset-0 w-full flex items-center justify-between">
-
-            <div className="relative w-130 h-120.5 ml-8">
-              <img src="/result-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_75s_linear_infinite]" />
-              <img src="/result-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]" />
-              <img src="/result-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
-
-              <img
-                src="/camera-icon.svg"
-                alt=""
-                onClick={() => setDisplayAllowCamera(true)}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 hover:scale-115"
-              />
-              <img
-                src="/camera-pointer.svg"
-                alt=""
-                className="absolute top-1/2 left-1/2 translate-x-10 -translate-y-25"
-              />
-              <div className="absolute top-31 left-93 text-sm leading-6 uppercase w-42 h-12">
-                Allow A.I. <br />to Scan Your Face
-              </div>
+            <div className="w-56.75 h-6 uppercase font-semibold text-base leading-6 ml-8 mt-4">
+              to start analysis
             </div>
 
-            <div className="relative w-130 h-120.5 ml-8">
-              <img src="/result-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_75s_linear_infinite]" />
-              <img src="/result-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]" />
-              <img src="/result-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
+            <div className="absolute inset-0 w-full flex items-center justify-between">
 
-              <img
-                src="/gallery-icon.svg"
-                alt=""
-                onClick={handleGalleryIconClick}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 hover:scale-115"
-              />
-              <img
-                src="/gallery-pointer.svg"
-                alt=""
-                className="absolute top-1/2 left-1/2 -translate-x-26 translate-y-11"
-              />
-              <div className="absolute top-82 -left-5 text-sm leading-6 uppercase text-right w-42 h-12">
-                Allow A.I. <br />Access Gallery
+              <div className="relative w-130 h-120.5 ml-8">
+                <img src="/result-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_75s_linear_infinite]" />
+                <img src="/result-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]" />
+                <img src="/result-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
+
+                <img
+                  src="/camera-icon.svg"
+                  alt=""
+                  onClick={() => setDisplayAllowCamera(true)}
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 hover:scale-115"
+                />
+                <img
+                  src="/camera-pointer.svg"
+                  alt=""
+                  className="absolute top-1/2 left-1/2 translate-x-10 -translate-y-25"
+                />
+                <div className="absolute top-31 left-93 text-sm leading-6 uppercase w-42 h-12">
+                  Allow A.I. <br />to Scan Your Face
+                </div>
               </div>
-              <input
-                type="file"
-                accept="image/*"
-                ref={fileInputRef}
-                onChange={handleFileChange}
-                className="hidden"
-              />
+
+              <div className="relative w-130 h-120.5 ml-8">
+                <img src="/result-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_75s_linear_infinite]" />
+                <img src="/result-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]" />
+                <img src="/result-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
+
+                <img
+                  src="/gallery-icon.svg"
+                  alt=""
+                  onClick={handleGalleryIconClick}
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 hover:scale-115"
+                />
+                <img
+                  src="/gallery-pointer.svg"
+                  alt=""
+                  className="absolute top-1/2 left-1/2 -translate-x-26 translate-y-11"
+                />
+                <div className="absolute top-82 -left-5 text-sm leading-6 uppercase text-right w-42 h-12">
+                  Allow A.I. <br />Access Gallery
+                </div>
+                <input
+                  type="file"
+                  accept="image/*"
+                  ref={fileInputRef}
+                  onChange={handleFileChange}
+                  className="hidden"
+                />
+
+              </div>
 
             </div>
 
-          </div>
+            {displayAllowCamera && (
+              <div className="absolute top-1/2 -translate-y-1/4 left-100 w-88 h-34 font-semibold uppercase bg-[#1a1b1c] text-[#fcfcfc]">
+                <div className="mt-2 mx-2">
+                  Allow A.I. to access your camera
+                </div>
+                <div className="mt-17 flex h-8 px-2 items-center justify-end border-t border-[#fcfcfc]">
+                  <button
+                    className="uppercase mx-8 cursor-pointer"
+                    onClick={() => setDisplayAllowCamera(false)}
+                  >
+                    deny
+                  </button>
+                  <button
+                    className="uppercase mx-2 cursor-pointer"
+                    onClick={() => { setCameraCapture(true); setDisplayAllowCamera(false) }}
+                  >
+                    allow
+                  </button>
+                </div>
+              </div>
+            )}
 
-          {displayAllowCamera && (
-            <div className="absolute top-1/2 -translate-y-1/4 left-100 w-88 h-34 font-semibold uppercase bg-[#1a1b1c] text-[#fcfcfc]">
-              <div className="mt-2 mx-2">
-                Allow A.I. to access your camera
-              </div>
-              <div className="mt-17 flex h-8 px-2 items-center justify-end border-t border-[#fcfcfc]">
-                <button
-                  className="uppercase mx-8 cursor-pointer"
-                  onClick={() => setDisplayAllowCamera(false)}
-                >
-                  deny
-                </button>
-                <button
-                  className="uppercase mx-2 cursor-pointer"
-                  onClick={() => {setCameraCapture(true); setDisplayAllowCamera(false)}}
-                >
-                  allow
-                </button>
-              </div>
+            <div className="absolute left-8 bottom-8">
+              <Link href="/testing">
+                <LeftButton selfHover={true} text="back" />
+              </Link>
             </div>
-          )}
 
-          <div className="absolute left-8 bottom-8">
-            <Link href="/testing">
-              <LeftButton selfHover={true} text="back" />
-            </Link>
           </div>
-
-        </div>
         )
       )}
 
