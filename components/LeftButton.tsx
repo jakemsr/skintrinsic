@@ -1,20 +1,34 @@
 
 interface LeftButtonProps {
   selfHover: boolean;
-  isHovered?: boolean,
+  isHovered?: boolean;
   text: string;
+  light?: boolean;
 }
 
-const LeftButton = ({ selfHover, isHovered, text }: LeftButtonProps) => {
+const LeftButton = ({ selfHover, isHovered, text, light }: LeftButtonProps) => {
+
+  const items = {
+    textColor: "#1a1b1c",
+    polygon: "/polygon-left.svg",
+    rectangle: "/rect-outer-line.svg"
+  }
+
+  if (light) {
+    items.textColor = "#fcfcfc";
+    items.polygon = "/polygon-left-light.svg";
+    items.rectangle = "/rect-outer-line-light.svg";
+  }
+
   return (
-    <div className={`relative w-40 h-12 ${selfHover && 'group'}`}>
+    <div className={`relative ${text ? 'w-40' : 'w-12'} h-12 ${selfHover && 'group'}`}>
       <img
-        src="polygon-left.svg"
+        src={items.polygon}
         alt=""
         className="absolute top-1/2 -translate-y-1/2 left-4"
       />
       <img
-        src="rect-outer-line.svg"
+        src={items.rectangle}
         alt=""
         className={`absolute top-1/2 -translate-y-1/2
           ${selfHover ?
@@ -23,7 +37,7 @@ const LeftButton = ({ selfHover, isHovered, text }: LeftButtonProps) => {
           `}
       />
       <div
-        className="absolute top-1/2 -translate-y-1/2 left-14 uppercase font-semibold text-sm leading-4 tracking-[-2%]"
+        className={`absolute top-1/2 -translate-y-1/2 left-14 text-[${items.textColor}] uppercase font-semibold text-sm leading-4 tracking-[-2%]`}
       >
         {text}
       </div>
