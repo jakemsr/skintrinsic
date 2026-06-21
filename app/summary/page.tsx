@@ -141,9 +141,9 @@ export default function Summary() {
             <circle
               cx="140" cy="140" r={radius}
               className="stroke-[#1a1b1c] fill-none stroke-3"
-              stroke-dasharray={circumference}
-              stroke-dashoffset={removed}
-              stroke-linecap="round"
+              strokeDasharray={circumference}
+              strokeDashoffset={removed}
+              strokeLinecap="round"
             />
           </svg>
 
