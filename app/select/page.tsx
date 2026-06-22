@@ -47,7 +47,12 @@ export default function Select() {
 
       <div className="absolute inset-0 w-full flex items-center justify-center">
 
-        <div className="flex items-center justify-center">
+        <div className="relative w-190.5 h-190.5">
+          <img src="/testing-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_75s_linear_infinite]" />
+          <img src="/testing-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]" />
+          <img src="/testing-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
+
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
           <div className="grid grid-cols-2 gap-2 p-8 rotate-45">
 
             <Square text="demographics" clickable={true} onClick={handleDemographics} />
@@ -59,6 +64,8 @@ export default function Select() {
             <Square text="weather" clickable={false} />
 
           </div>
+        </div>
+
         </div>
 
       </div>
