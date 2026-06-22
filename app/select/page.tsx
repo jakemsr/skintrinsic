@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
+import LeftButton from "@/components/LeftButton";
+import RightButton from "@/components/RightButton";
 
 
 export default function Select() {
@@ -86,7 +88,16 @@ export default function Select() {
 
       <div className="absolute left-8 bottom-8">
         <Link href="/result">
-          <img src="/back.svg" alt="" />
+          <LeftButton selfHover={true} text="back" />
+        </Link>
+      </div>
+
+      <div
+        className={`absolute bottom-8 transition-all duration-1500
+          ${selection !== Selection.none ? 'right-8 opacity-100' : 'right-1/4 opacity-0 pointer-events-none'}`}
+      >
+        <Link href="/summary">
+          <RightButton selfHover={true} text="get summary" />
         </Link>
       </div>
 
