@@ -239,7 +239,7 @@ export default function Result() {
 
                   <button
                     onClick={() => { setCameraCapture(false); setCameraReady(false) }}
-                    className="absolute bottom-8 left-8"
+                    className="absolute bottom-8 left-8 cursor-pointer"
                   >
                     <LeftButton selfHover={true} text="" light={true} />
                   </button>
@@ -262,7 +262,7 @@ export default function Result() {
                       </div>
 
                       <div
-                        className="absolute bottom-8 left-8"
+                        className="absolute bottom-8 left-8 cursor-pointer"
                         onClick={() => setImgSrc("")}
                       >
                         <LeftButton selfHover={true} text="back" light={true} />
