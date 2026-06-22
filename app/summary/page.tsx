@@ -221,7 +221,9 @@ export default function Summary() {
 
   return (
     <div className="relative flex flex-col max-h-240 h-screen w-screen max-w-[1920px] overflow-y-auto bg-[#fcfcfc] text-[#1a1b1c] overflow-x-hidden">
-      <NavBar code={false} location="analysis" />
+      <div>
+        <NavBar code={false} location="analysis" />
+      </div>
 
       <div className="mx-8 mt-4">
 
@@ -235,7 +237,7 @@ export default function Summary() {
           Predicted Race & Age
         </div>
 
-        <div className="mt-8 flex gap-4">
+        <div className="mt-16 flex gap-4">
           <div className="flex flex-col w-50 gap-1 uppercase text-semibold tracking-[-2%]">
 
             <DisplayCategoryBlock category={Display.race} />
