@@ -195,7 +195,7 @@ export default function Summary() {
         ...race.sort((a, b) => (b.value) - (a.value))
       ];
       setRace(sortedRace);
-      setTrueRace(race[0].key)
+      setTrueRace(sortedRace[0].key)
 
       let age = [];
       for (const [key, value] of Object.entries(data.age)) {
@@ -205,7 +205,7 @@ export default function Summary() {
         ...age.sort((a, b) => (b.value) - (a.value))
       ];
       setAge(sortedAge);
-      setTrueAge(age[0].key)
+      setTrueAge(sortedAge[0].key)
 
       let gender = [];
       for (const [key, value] of Object.entries(data.gender)) {
@@ -215,7 +215,7 @@ export default function Summary() {
         ...gender.sort((a, b) => (b.value) - (a.value))
       ];
       setGender(sortedGender);
-      setTrueGender(gender[0].key)
+      setTrueGender(sortedGender[0].key)
     }
   }, []);
 
