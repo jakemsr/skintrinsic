@@ -161,6 +161,12 @@ export default function Summary() {
     )
   }
 
+  const resetTrueValues = () => {
+    setTrueRace(race[0].key);
+    setTrueAge(age[0].key);
+    setTrueGender(gender[0].key);
+  }
+
   const [display, setDisplay] = useState<Display>(Display.race);
 
   const [race, setRace] = useState<CategoryData[]>([]);
@@ -269,8 +275,15 @@ export default function Summary() {
         </div>
 
         <div className="flex gap-4">
-          <div className="flex items-center justify-center border w-18 h-9 uppercase">reset</div>
-          <div className="flex items-center justify-center bg-[#1a1b1c] w-22 h-9 text-[#fcfcfc] uppercase">confirm</div>
+          <div
+            className="flex items-center justify-center border w-18 h-9 uppercase cursor-pointer"
+            onClick={resetTrueValues}
+          >
+            reset
+          </div>
+          <div className="flex items-center justify-center bg-[#1a1b1c] w-22 h-9 text-[#fcfcfc] uppercase cursor-pointer">
+            confirm
+          </div>
         </div>
 
       </div>
