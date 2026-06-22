@@ -186,7 +186,7 @@ export default function Testing() {
 
       <div
         className={`absolute bottom-8 transition-all duration-1500
-          ${showProceed ? 'right-8 opacity-100' : 'right-1/4 opacity-0'}`}
+          ${showProceed ? 'right-8 opacity-100' : 'right-1/4 opacity-0 pointer-events-none'}`}
       >
         <Link href="/result">
           <RightButton selfHover={true} text="proceed" />
