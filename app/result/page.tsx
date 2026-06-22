@@ -319,7 +319,7 @@ export default function Result() {
                   src="/camera-icon.svg"
                   alt=""
                   onClick={() => setDisplayAllowCamera(true)}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 hover:scale-115"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 hover:scale-115 cursor-pointer"
                 />
                 <img
                   src="/camera-pointer.svg"
@@ -340,7 +340,7 @@ export default function Result() {
                   src="/gallery-icon.svg"
                   alt=""
                   onClick={handleGalleryIconClick}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 hover:scale-115"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 hover:scale-115 cursor-pointer"
                 />
                 <img
                   src="/gallery-pointer.svg"
