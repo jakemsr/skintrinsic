@@ -24,7 +24,7 @@ export default function Select() {
     onClick?: React.MouseEventHandler;
   }
 
-  const Square = ({text, clickable, dark, onClick}: SquareProps) => {
+  const Square = ({ text, clickable, dark, onClick }: SquareProps) => {
     return (
       <div
         className={`relative w-38.5 h-38.5
@@ -63,24 +63,24 @@ export default function Select() {
           <img src="/testing-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]" />
           <img src="/testing-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
 
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
-          <div className="grid grid-cols-2 gap-2 p-8 rotate-45">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
+            <div className="grid grid-cols-2 gap-2 p-8 rotate-45">
 
-            <Square
-              text="demographics"
-              clickable={true}
-              dark={selection === Selection.demographics}
-              onClick={() => setSelection(Selection.demographics)}
-            />
+              <Square
+                text="demographics"
+                clickable={true}
+                dark={selection === Selection.demographics}
+                onClick={() => setSelection(Selection.demographics)}
+              />
 
-            <Square text="cosmetic concerns" clickable={false} />
+              <Square text="cosmetic concerns" clickable={false} />
 
-            <Square text="skin type details" clickable={false} />
+              <Square text="skin type details" clickable={false} />
 
-            <Square text="weather" clickable={false} />
+              <Square text="weather" clickable={false} />
 
+            </div>
           </div>
-        </div>
 
         </div>
 
