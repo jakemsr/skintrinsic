@@ -1,11 +1,19 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useState } from "react";
 import Link from "next/link";
 import NavBar from "@/components/NavBar";
 
 
 export default function Select() {
+
+  enum Selection {
+    none,
+    demographics,
+    concerns,
+    skin,
+    weather
+  }
 
   interface SquareProps {
     text: string;
@@ -30,11 +38,8 @@ export default function Select() {
     )
   }
 
-  const handleDemographics = () => {
-    router.push("/summary");
-  }
+  const [selection, setSelection] = useState<Selection>(Selection.none);
 
-  const router = useRouter();
 
   return (
     <div className="relative flex flex-col h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
@@ -59,7 +64,12 @@ export default function Select() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
           <div className="grid grid-cols-2 gap-2 p-8 rotate-45">
 
-            <Square text="demographics" clickable={true} onClick={handleDemographics} />
+            <Square
+              text="demographics"
+              clickable={true}
+              dark={selection === Selection.demographics}
+              onClick={() => setSelection(Selection.demographics)}
+            />
 
             <Square text="cosmetic concerns" clickable={false} />
 
