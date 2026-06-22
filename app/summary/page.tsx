@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import NavBar from "@/components/NavBar";
+import Link from "next/link";
+import LeftButton from "@/components/LeftButton";
 
 export default function Summary() {
 
@@ -52,7 +54,7 @@ export default function Summary() {
         break;
     }
     return (
-      <div className="flex flex-col w-md bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
+      <div className="flex flex-col w-md h-92 bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
         <div className="flex justify-between items-center h-9 text-base font-medium tracking-[-2%] uppercase px-2">
           <div>
             {display}
@@ -66,7 +68,10 @@ export default function Summary() {
             className={`flex justify-between items-center h-9 text-base font-normal tracking-[-2%] px-2 cursor-pointer ${trueValue === item.key ? 'bg-[#1a1b1c] text-[#fcfcfc]' : 'bg-[#f3f3f4] hover:bg-[#e1e1e2]'} `}
             onClick={() => setTrueValue(display, item.key)}
           >
-            <div className="capitalize">{item.key}</div>
+            <div className="flex items-center capitalize gap-2">
+              <div className="w-2 h-2 border rotate-45"></div>
+              {item.key}
+            </div>
             <div>{(item.value * 100).toFixed(2)}%</div>
           </div>)
         )}
@@ -126,20 +131,20 @@ export default function Summary() {
         break;
     }
 
-    const radius = 130;
+    const radius = 150;
     const circumference = radius * 2 * Math.PI;
     const removed = circumference - (circumference * percent);
 
     return (
-      <div className="flex items-center justify-end">
+      <div className="relative flex justify-end">
         <div className="relative flex items-center justify-center">
-          <svg className="w-70 h-70 -rotate-90">
+          <svg className="w-80 h-80 -rotate-90">
             <circle
-              cx="140" cy="140" r={radius}
+              cx="160" cy="160" r={radius}
               className="stroke-[#c1c2c3] fill-none stroke-3"
             />
             <circle
-              cx="140" cy="140" r={radius}
+              cx="160" cy="160" r={radius}
               className="stroke-[#1a1b1c] fill-none stroke-3"
               strokeDasharray={circumference}
               strokeDashoffset={removed}
@@ -209,7 +214,7 @@ export default function Summary() {
   }, []);
 
   return (
-    <div className="relative flex flex-col h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
+    <div className="relative flex flex-col max-h-240 h-screen w-screen max-w-[1920px] overflow-y-auto bg-[#fcfcfc] text-[#1a1b1c] overflow-x-hidden">
       <NavBar code={false} location="analysis" />
 
       <div className="mx-8 mt-4">
@@ -233,7 +238,7 @@ export default function Summary() {
 
           </div>
 
-          <div className="w-[-webkit-fill-available] bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
+          <div className="w-[-webkit-fill-available] h-92 bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
 
             <div className="ml-2 mt-2 text-[40px] leading-10 tracking-[-5%] capitalize">
               {display === Display.race && trueRace}
@@ -247,6 +252,25 @@ export default function Summary() {
 
           <DisplayCategory display={display} />
 
+        </div>
+
+      </div>
+
+      <div className="flex h-24 mb-2 p-8 justify-between items-center">
+
+        <div className="">
+          <Link href="/select">
+            <LeftButton selfHover={true} text="back" />
+          </Link>
+        </div>
+
+        <div className="tracking-[-2%] text-[#A0A4Ab]">
+          If A.I. estimate is wrong, select the correct one.
+        </div>
+
+        <div className="flex gap-4">
+          <div className="flex items-center justify-center border w-18 h-9 uppercase">reset</div>
+          <div className="flex items-center justify-center bg-[#1a1b1c] w-22 h-9 text-[#fcfcfc] uppercase">confirm</div>
         </div>
 
       </div>
