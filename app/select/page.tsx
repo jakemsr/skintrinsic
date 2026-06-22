@@ -10,13 +10,17 @@ export default function Select() {
   interface SquareProps {
     text: string;
     clickable: boolean;
+    dark?: boolean;
     onClick?: React.MouseEventHandler;
   }
 
-  const Square = ({text, clickable, onClick}: SquareProps) => {
+  const Square = ({text, clickable, dark, onClick}: SquareProps) => {
     return (
       <div
-        className={`relative w-38.5 h-38.5 bg-[#F3F3F4] hover:bg-[#E1E1E2] ${clickable ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+        className={`relative w-38.5 h-38.5
+          ${dark ? 'bg-[#1a1b1c] text-[#fcfcfc]' : 'bg-[#F3F3F4] hover:bg-[#E1E1E2] '}
+          ${clickable ? 'cursor-pointer' : 'cursor-not-allowed'}
+        `}
         onClick={onClick}
       >
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45 font-semibold tracking-[-2%] uppercase">
