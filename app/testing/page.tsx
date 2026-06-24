@@ -144,7 +144,7 @@ export default function Testing() {
                     {error && <p className="text-sm text-red-600 w-full">{error}</p>}
                   </div>
 
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-6xl font-normal tracking-[-7%] w-105 h-16">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-4xl xl:text-6xl font-normal tracking-[-7%] w-105 h-16">
                     {!showSecondInput ? (
                       <input
                         type="text"
