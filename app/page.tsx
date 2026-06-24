@@ -27,7 +27,7 @@ export default function Home() {
 
         <div className="relative flex w-full items-start -translate-y-30 xl:items-center xl:translate-y-0 justify-between">
 
-          <div className={`hidden lg:block relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredRight && 'opacity-0'}`}>
+          <div className={`hidden xl:block relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredRight && 'opacity-0'}`}>
             <div className="relative w-screen h-screen">
               <img
                 src="/testing-inner-rect.svg"
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
 
 
-          <div className={`hidden lg:block relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredLeft && 'opacity-0'}`}>
+          <div className={`hidden xl:block relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredLeft && 'opacity-0'}`}>
             <div className="relative w-screen h-screen">
               <img
                 src="/testing-inner-rect.svg"
@@ -126,7 +126,7 @@ export default function Home() {
         what your skin needs.
       </div>
 
-      <div className="absolute right-8 bottom-8 lg:hidden">
+      <div className="absolute right-8 bottom-8 xl:hidden">
         <Link href="/testing">
           <RightButton selfHover={true} text="take test" />
         </Link>
