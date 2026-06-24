@@ -53,6 +53,8 @@ export default function Select() {
       <div className="w-84 h-12 uppercse font-normal text-sm leading-6 ml-8 mt-2">
         A. I. has estimated the following.
         <br />
+        Select a category to get a summary.
+        <br />
         Fix estimated information if needed.
       </div>
 
