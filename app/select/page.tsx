@@ -27,7 +27,7 @@ export default function Select() {
   const Square = ({ text, clickable, dark, onClick }: SquareProps) => {
     return (
       <div
-        className={`relative w-28 h-28 sm:w-30 sm:h-30 md:w-38.5 md:h-38.5 text-xs sm:text-base
+        className={`relative w-23 h-23 xl:w-38.5 xl:h-38.5 text-xs xl:text-base
           ${dark ? 'bg-[#1a1b1c] text-[#fcfcfc]' : 'bg-[#F3F3F4] hover:bg-[#E1E1E2] '}
           ${clickable ? 'cursor-pointer' : 'cursor-not-allowed'}
         `}
