@@ -54,7 +54,7 @@ export default function Summary() {
         break;
     }
     return (
-      <div className="flex flex-col h-92 w-full max-w-80 bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
+      <div className="flex flex-col h-92 w-full bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
         <div className="flex justify-between items-center h-9 text-base font-medium tracking-[-2%] uppercase px-2">
           <div>
             {display}
@@ -101,7 +101,7 @@ export default function Summary() {
 
     return (
       <div
-        className={`flex flex-col p-2 justify-between h-20 border-t border-solid border-[#1a1b1c] cursor-pointer ${display === category ? 'bg-[#1a1b1c] text-[#fcfcfc]' : 'bg-[#f3f3f4] hover:bg-[#e1e1e2]'}`}
+        className={`flex flex-col w-full p-2 justify-between h-20 border-t border-solid border-[#1a1b1c] cursor-pointer ${display === category ? 'bg-[#1a1b1c] text-[#fcfcfc]' : 'bg-[#f3f3f4] hover:bg-[#e1e1e2]'}`}
         onClick={() => setDisplay(category)}
       >
         <div>
@@ -230,15 +230,15 @@ export default function Summary() {
         <div className="w-56.75 h-6 uppercase font-semibold text-base leading-6 tracking-[-2%]">
           A.I. analysis
         </div>
-        <div className="uppercase text-7xl leading-17 tracking-[-6%]">
+        <div className="uppercase text-4xl xl:text-7xl xl:leading-17 tracking-[-6%]">
           demographics
         </div>
         <div className="uppercase text-sm leading-6">
           Predicted Race & Age
         </div>
 
-        <div className="mt-16 flex flex-row items-start gap-4 w-full">
-          <div className="flex flex-col w-50 gap-1 uppercase text-semibold tracking-[-2%]">
+        <div className="mt-16 flex flex-col xl:flex-row items-start gap-4 w-full">
+          <div className="flex xl:flex-col w-full gap-1 uppercase text-semibold tracking-[-2%]">
 
             <DisplayCategoryBlock category={Display.race} />
             <DisplayCategoryBlock category={Display.age} />
@@ -246,9 +246,9 @@ export default function Summary() {
 
           </div>
 
-          <div className="flex flex-col-reverse md:flex md:flex-row gap-4 w-full">
+          <div className="flex flex-col-reverse xl:flex-row gap-4 w-full">
 
-          <div className="w-80 md:w-[-webkit-fill-available] h-92 bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
+          <div className="w-full xl:w-[-webkit-fill-available] h-92 bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
 
             <div className="ml-2 mt-2 text-[40px] leading-10 tracking-[-5%] capitalize">
               {display === Display.race && trueRace}
