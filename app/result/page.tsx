@@ -234,7 +234,7 @@ export default function Result() {
                   </div>
 
                     {dimensions.height > dimensions.width && showRotateWarning && (
-                      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+                      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-100">
                         You may have better luck rotating your device.
                       </div>
                     )}
