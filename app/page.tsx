@@ -25,7 +25,7 @@ export default function Home() {
 
       <div className="absolute inset-0 flex items-center justify-center">
 
-        <div className="relative flex w-full items-start -translate-y-30 md:items-center md:translate-y-0 justify-between">
+        <div className="relative flex w-full items-start -translate-y-30 xl:items-center xl:translate-y-0 justify-between">
 
           <div className={`hidden lg:block relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredRight && 'opacity-0'}`}>
             <div className="relative w-screen h-screen">
@@ -60,7 +60,7 @@ export default function Home() {
 
 
           <div
-            className={`absolute flex items-center justify-center font-light text-7xl leading-18 xl:text-[120px] xl:leading-30 tracking-[-7%] -translate-y-1/2 transition-all duration-1000 ease-in-out
+            className={`absolute flex items-center justify-center font-light text-4xl leading-10 xl:text-[120px] xl:leading-30 tracking-[-7%] -translate-y-1/2 transition-all duration-1000 ease-in-out
               ${isHoveredRight ? 'left-8' :
                 isHoveredLeft ? 'left-full -translate-x-full -ml-8' :
                   'left-1/2 -translate-x-1/2'}              
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
 
           <div
-            className={`absolute flex items-center justify-center font-light text-7xl leading-18 md:leading-34 xl:text-[120px] xl:leading-30 tracking-[-7%] translate-y-1/2 transition-all duration-1000 ease-in-out
+            className={`absolute flex items-center justify-center font-light text-4xl leading-10 xl:text-[120px] xl:leading-30 tracking-[-7%] translate-y-1/2 transition-all duration-1000 ease-in-out
               ${isHoveredRight ? 'left-8' :
                 isHoveredLeft ? 'left-full -translate-x-full -ml-8' :
                   'left-1/2 -translate-x-1/2'}
@@ -120,7 +120,7 @@ export default function Home() {
 
       </div>
 
-      <div className="absolute left-8 bottom-8 text-sm leading-6 font-normal uppercase w-60 xl:w-79 h-18">
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-24 text-center xl:left-8 xl:bottom-8 xl:translate-x-0 xl:text-left text-sm leading-6 font-normal uppercase w-79 xl:w-79 h-18">
         Skinstric developed an A.I. that creates
         a highly-personalised routine tailored to
         what your skin needs.
