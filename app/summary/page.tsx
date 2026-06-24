@@ -246,7 +246,7 @@ export default function Summary() {
 
           </div>
 
-          <div className="flex flex-col-reverse xl:flex-row gap-4 w-full">
+          <div className="flex flex-col xl:flex-row gap-4 w-full">
 
           <div className="w-full xl:w-[-webkit-fill-available] h-92 bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
 
