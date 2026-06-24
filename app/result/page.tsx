@@ -94,7 +94,6 @@ export default function Result() {
       if (!response.ok) {
         setError(data.error);
         console.error('Error:', data.error);
-        setProcessing(false);
         return;
       }
 
@@ -104,12 +103,10 @@ export default function Result() {
       } else {
         setError(data.message);
         console.error("Error", data);
-        setProcessing(false);
       }
     } catch (error) {
       setError('Network error. Please try again later.');
       console.error('Network error:', error);
-      setProcessing(false);
     }
   }
 
@@ -153,7 +150,6 @@ export default function Result() {
       } catch (error) {
         setError(error as string);
         console.error("Error converting file:", error);
-        setProcessing(false);
       }
     }
   };
@@ -190,12 +186,16 @@ export default function Result() {
   return (
     <>
       {processing ? (
-        <div className="relative h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden flex items-center justify-center">
+        <div className="relative h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden flex items-center justify-center text-[#1a1b1c]">
 
           <img src="/result-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_75s_linear_infinite]" />
           <img src="/result-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]" />
           <img src="/result-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold uppercase tracking-[-2%] text-center">
+            {error && ( 
+              <div className="text-center text-red-500">
+                {error}
+              </div>)}
             {complete ? (
               <div className="text-center">
                 Analysis complete!
