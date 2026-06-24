@@ -224,7 +224,7 @@ export default function Result() {
                 ref={webcamRef}
                 screenshotFormat="image/jpeg"
                 videoConstraints={videoConstraints}
-                onUserMedia={() => setCameraReady(true)}
+                onUserMedia={() => {setCameraReady(true); startRotateWarning()}}
               />
 
               {cameraReady ? (
@@ -396,7 +396,7 @@ export default function Result() {
                   </button>
                   <button
                     className="uppercase mx-2 cursor-pointer"
-                    onClick={() => { setCameraCapture(true); setDisplayAllowCamera(false); startRotateWarning() }}
+                    onClick={() => { setCameraCapture(true); setDisplayAllowCamera(false) }}
                   >
                     allow
                   </button>
