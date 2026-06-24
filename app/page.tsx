@@ -25,9 +25,9 @@ export default function Home() {
 
       <div className="absolute inset-0 flex items-center justify-center">
 
-        <div className="relative flex w-full items-center justify-between">
+        <div className="relative flex w-full items-start -translate-y-30 md:items-center md:translate-y-0 justify-between">
 
-          <div className={`relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredRight && 'opacity-0'}`}>
+          <div className={`hidden lg:block relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredRight && 'opacity-0'}`}>
             <div className="relative w-screen h-screen">
               <img
                 src="/testing-inner-rect.svg"
@@ -60,7 +60,7 @@ export default function Home() {
 
 
           <div
-            className={`absolute flex items-center justify-center font-light text-[120px] leading-30 tracking-[-7%] -translate-y-1/2 transition-all duration-1000 ease-in-out
+            className={`absolute flex items-center justify-center font-light text-7xl sm:text-8xl md:text-[100px] lg:text-[120px] lg:leading-30 tracking-[-7%] -translate-y-1/2 transition-all duration-1000 ease-in-out
               ${isHoveredRight ? 'left-8' :
                 isHoveredLeft ? 'left-full -translate-x-full -ml-8' :
                   'left-1/2 -translate-x-1/2'}              
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
 
           <div
-            className={`absolute flex items-center justify-center font-light text-[120px] leading-30 tracking-[-7%] translate-y-1/2 transition-all duration-1000 ease-in-out
+            className={`absolute flex items-center justify-center font-light text-7xl sm:text-8xl md:text-[100px] lg:text-[120px] leading-30 tracking-[-7%] translate-y-1/2 transition-all duration-1000 ease-in-out
               ${isHoveredRight ? 'left-8' :
                 isHoveredLeft ? 'left-full -translate-x-full -ml-8' :
                   'left-1/2 -translate-x-1/2'}
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
 
 
-          <div className={`relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredLeft && 'opacity-0'}`}>
+          <div className={`hidden lg:block relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredLeft && 'opacity-0'}`}>
             <div className="relative w-screen h-screen">
               <img
                 src="/testing-inner-rect.svg"
@@ -124,6 +124,12 @@ export default function Home() {
         Skinstric developed an A.I. that creates
         a highly-personalised routine tailored to
         what your skin needs.
+      </div>
+
+      <div className="absolute right-8 bottom-8 lg:hidden">
+        <Link href="/testing">
+          <RightButton selfHover={true} text="take test" />
+        </Link>
       </div>
 
     </div>

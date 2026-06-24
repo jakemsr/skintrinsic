@@ -27,7 +27,7 @@ export default function Select() {
   const Square = ({ text, clickable, dark, onClick }: SquareProps) => {
     return (
       <div
-        className={`relative w-38.5 h-38.5
+        className={`relative w-28 h-28 sm:w-30 sm:h-30 md:w-38.5 md:h-38.5 text-xs sm:text-base
           ${dark ? 'bg-[#1a1b1c] text-[#fcfcfc]' : 'bg-[#F3F3F4] hover:bg-[#E1E1E2] '}
           ${clickable ? 'cursor-pointer' : 'cursor-not-allowed'}
         `}
@@ -64,7 +64,7 @@ export default function Select() {
           <img src="/testing-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
 
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center">
-            <div className="grid grid-cols-2 gap-2 p-8 rotate-45">
+            <div className="grid grid-cols-2 gap-2 rotate-45">
 
               <Square
                 text="demographics"

@@ -12,7 +12,7 @@ export default function Result() {
 
   const PictureInstructions = () => {
     return (
-      <div className="flex flex-col items-center justify-center text-sm leading-6 uppercase">
+      <div className="flex flex-col items-center justify-center w-130 sm:1-50 text-xs sm:text-sm leading-6 uppercase">
         <div className="mb-4">
           To get better results make sure to have
         </div>
@@ -326,7 +326,7 @@ export default function Result() {
                   alt=""
                   className="absolute top-1/2 left-1/2 translate-x-10 -translate-y-25"
                 />
-                <div className="absolute top-31 left-93 text-sm leading-6 uppercase w-42 h-12">
+                <div className="absolute top-1/2 left-1/2 translate-x-28 -translate-y-32 text-sm leading-6 uppercase w-42 h-12">
                   Allow A.I. <br />to Scan Your Face
                 </div>
               </div>
@@ -347,7 +347,7 @@ export default function Result() {
                   alt=""
                   className="absolute top-1/2 left-1/2 -translate-x-26 translate-y-11"
                 />
-                <div className="absolute top-82 -left-5 text-sm leading-6 uppercase text-right w-42 h-12">
+                <div className="absolute top-1/2 left-1/2 -translate-x-69 translate-y-20 text-sm leading-6 uppercase text-right w-42 h-12">
                   Allow A.I. <br />Access Gallery
                 </div>
                 <input
@@ -363,7 +363,7 @@ export default function Result() {
             </div>
 
             {displayAllowCamera && (
-              <div className="absolute top-1/2 -translate-y-1/4 left-100 w-88 h-34 font-semibold uppercase bg-[#1a1b1c] text-[#fcfcfc]">
+              <div className="absolute top-1/2 -translate-y-1/4 left-1/4 w-88 h-34 font-semibold uppercase bg-[#1a1b1c] text-[#fcfcfc]">
                 <div className="mt-2 mx-2">
                   Allow A.I. to access your camera
                 </div>

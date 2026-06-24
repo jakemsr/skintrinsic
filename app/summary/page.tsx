@@ -54,7 +54,7 @@ export default function Summary() {
         break;
     }
     return (
-      <div className="flex flex-col w-md h-92 bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
+      <div className="flex flex-col h-92 w-full max-w-80 bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
         <div className="flex justify-between items-center h-9 text-base font-medium tracking-[-2%] uppercase px-2">
           <div>
             {display}
@@ -237,7 +237,7 @@ export default function Summary() {
           Predicted Race & Age
         </div>
 
-        <div className="mt-16 flex gap-4">
+        <div className="mt-16 flex flex-row items-start gap-4 w-full">
           <div className="flex flex-col w-50 gap-1 uppercase text-semibold tracking-[-2%]">
 
             <DisplayCategoryBlock category={Display.race} />
@@ -246,7 +246,9 @@ export default function Summary() {
 
           </div>
 
-          <div className="w-[-webkit-fill-available] h-92 bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
+          <div className="flex flex-col-reverse md:flex md:flex-row gap-4 w-full">
+
+          <div className="w-80 md:w-[-webkit-fill-available] h-92 bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
 
             <div className="ml-2 mt-2 text-[40px] leading-10 tracking-[-5%] capitalize">
               {display === Display.race && trueRace}
@@ -259,6 +261,8 @@ export default function Summary() {
           </div>
 
           <DisplayCategory display={display} />
+
+          </div>
 
         </div>
 
