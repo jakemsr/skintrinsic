@@ -60,7 +60,7 @@ export default function Home() {
 
 
           <div
-            className={`absolute flex items-center justify-center font-light text-7xl sm:text-8xl md:text-[100px] lg:text-[120px] lg:leading-30 tracking-[-7%] -translate-y-1/2 transition-all duration-1000 ease-in-out
+            className={`absolute flex items-center justify-center font-light text-7xl sm:text-8xl md:text-[100px] xl:text-[120px] lg:leading-30 tracking-[-7%] -translate-y-1/2 transition-all duration-1000 ease-in-out
               ${isHoveredRight ? 'left-8' :
                 isHoveredLeft ? 'left-full -translate-x-full -ml-8' :
                   'left-1/2 -translate-x-1/2'}              
@@ -120,7 +120,7 @@ export default function Home() {
 
       </div>
 
-      <div className="absolute left-8 bottom-8 text-sm leading-6 font-normal uppercase w-79 h-18">
+      <div className="absolute left-8 bottom-8 text-sm leading-6 font-normal uppercase w-60 xl:w-79 h-18">
         Skinstric developed an A.I. that creates
         a highly-personalised routine tailored to
         what your skin needs.
