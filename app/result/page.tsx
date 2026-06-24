@@ -12,7 +12,14 @@ export default function Result() {
 
   const PictureInstructions = () => {
     return (
-      <div className="flex flex-col items-center justify-center w-130 sm:1-50 text-xs sm:text-sm leading-6 uppercase">
+      <div className="flex flex-col items-center justify-center w-130 sm:w-150 text-xs sm:text-sm leading-6 uppercase">
+
+        {dimensions.height > dimensions.width && (
+          <div className="mb-2">
+            You may have better luck rotating your device.
+          </div>
+        )}
+
         <div className="mb-4">
           To get better results make sure to have
         </div>
