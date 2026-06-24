@@ -186,7 +186,7 @@ export default function Result() {
   return (
     <>
       {processing ? (
-        <div className="relative h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden flex items-center justify-center text-[#1a1b1c]">
+        <div className="relative h-dvh max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden flex items-center justify-center text-[#1a1b1c]">
 
           <img src="/result-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_75s_linear_infinite]" />
           <img src="/result-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]" />
@@ -218,7 +218,7 @@ export default function Result() {
       ) : (
         cameraCapture ? (
           <>
-            <div className="relative h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden flex items-center justify-center text-[#fcfcfc]">
+            <div className="relative h-dvh max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden flex items-center justify-center text-[#fcfcfc]">
               <Webcam
                 audio={false}
                 ref={webcamRef}
@@ -321,7 +321,7 @@ export default function Result() {
           </>
         ) : (
 
-          <div className="relative flex flex-col h-screen max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
+          <div className="relative flex flex-col h-dvh max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
             <NavBar code={false} location="intro" />
 
             <div className="w-56.75 h-6 uppercase font-semibold text-base leading-6 ml-8 mt-4">
