@@ -141,10 +141,9 @@ export default function Testing() {
                 <>
                   <div className="absolute top-80 left-1/2 -translate-x-1/2 text-center w-full">
                     <span className="text-sm leading-6 font-normal uppercase opacity-40">click to type</span>
-                    {error && <p className="text-sm text-red-600 w-full">{error}</p>}
                   </div>
 
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center justify-center text-4xl xl:text-6xl font-normal tracking-[-7%] w-105 h-16">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-4xl xl:text-6xl font-normal tracking-[-7%] w-105 h-16">
                     {!showSecondInput ? (
                       <input
                         type="text"
@@ -168,6 +167,7 @@ export default function Testing() {
                         className="border-0 border-b focus:outline-none text-center placeholder:text-[#1a1b1c] placeholder:opacity-100"
                       />
                     )}
+                    {error && <p className="text-sm text-red-600 w-full text-center">{error}</p>}
                   </div>
                 </>
               )}
