@@ -54,7 +54,7 @@ export default function Summary() {
         break;
     }
     return (
-      <div className="flex flex-col h-92 w-full bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
+      <div className="flex flex-col h-92 w-full xl:max-w-90 bg-[#f3f3f4] border-t border-solid border-[#1a1b1c]">
         <div className="flex justify-between items-center h-9 text-base font-medium tracking-[-2%] uppercase px-2">
           <div>
             {display}
@@ -238,7 +238,7 @@ export default function Summary() {
         </div>
 
         <div className="mt-16 flex flex-col xl:flex-row items-start gap-4 w-full">
-          <div className="flex xl:flex-col w-full gap-1 uppercase text-semibold tracking-[-2%]">
+          <div className="flex xl:flex-col w-full xl:max-w-40 gap-1 uppercase text-semibold tracking-[-2%]">
 
             <DisplayCategoryBlock category={Display.race} />
             <DisplayCategoryBlock category={Display.age} />
@@ -268,6 +268,10 @@ export default function Summary() {
 
       </div>
 
+      <div className="tracking-[-2%] text-[#A0A4Ab] text-center mt-2 block xl:hidden">
+        If A.I. estimate is wrong, select the correct one.
+      </div>
+
       <div className="flex h-24 mb-2 p-8 justify-between items-center">
 
         <div className="">
@@ -276,7 +280,7 @@ export default function Summary() {
           </Link>
         </div>
 
-        <div className="tracking-[-2%] text-[#A0A4Ab]">
+        <div className="tracking-[-2%] text-[#A0A4Ab] text-center hidden xl:block">
           If A.I. estimate is wrong, select the correct one.
         </div>
 
