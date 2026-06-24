@@ -54,6 +54,7 @@ export default function Result() {
   const [imgSrc, setImgSrc] = useState<string | null>(null);
   const [cameraCapture, setCameraCapture] = useState(false);
   const [cameraReady, setCameraReady] = useState(false);
+  const [showRotateWarning, setShowRotateWarning] = useState(false);
 
   const [dimensions, setDimensions] = useState({
     width: typeof window !== 'undefined' ? window.innerWidth : 0,
@@ -179,6 +180,12 @@ export default function Result() {
     submitImage();
   }, [base64Image]);
 
+  const startRotateWarning = () => {
+    setShowRotateWarning(true);
+    setTimeout(() => {
+      setShowRotateWarning(false);
+    }, 5000)
+  }
 
   return (
     <>
@@ -225,6 +232,12 @@ export default function Result() {
                   <div className="absolute top-0 left-0">
                     <NavBar code={false} location="intro" light={true} />
                   </div>
+
+                    {dimensions.height > dimensions.width && showRotateWarning && (
+                      <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+                        You may have better luck rotating your device.
+                      </div>
+                    )}
 
                   <div
                     className="absolute right-8 top-1/2 -translate-y-1/2 w-44 h-15.5 cursor-pointer"
@@ -383,7 +396,7 @@ export default function Result() {
                   </button>
                   <button
                     className="uppercase mx-2 cursor-pointer"
-                    onClick={() => { setCameraCapture(true); setDisplayAllowCamera(false) }}
+                    onClick={() => { setCameraCapture(true); setDisplayAllowCamera(false); startRotateWarning() }}
                   >
                     allow
                   </button>
