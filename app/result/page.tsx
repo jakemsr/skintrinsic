@@ -223,6 +223,7 @@ export default function Result() {
                 audio={false}
                 ref={webcamRef}
                 screenshotFormat="image/jpeg"
+                mirrored={true}
                 videoConstraints={videoConstraints}
                 onUserMedia={() => {setCameraReady(true); startRotateWarning()}}
               />
