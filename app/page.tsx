@@ -60,7 +60,7 @@ export default function Home() {
 
 
           <div
-            className={`absolute flex items-center justify-center font-light text-4xl leading-10 xl:text-[120px] xl:leading-30 tracking-[-7%] -translate-y-1/2 transition-all duration-1000 ease-in-out
+            className={`absolute flex items-center justify-center font-light text-5xl leading-12 xl:text-[120px] xl:leading-30 tracking-[-7%] -translate-y-1/2 transition-all duration-1000 ease-in-out
               ${isHoveredRight ? 'left-8' :
                 isHoveredLeft ? 'left-full -translate-x-full -ml-8' :
                   'left-1/2 -translate-x-1/2'}              
@@ -72,7 +72,7 @@ export default function Home() {
           </div>
 
           <div
-            className={`absolute flex items-center justify-center font-light text-4xl leading-10 xl:text-[120px] xl:leading-30 tracking-[-7%] translate-y-1/2 transition-all duration-1000 ease-in-out
+            className={`absolute flex items-center justify-center font-light text-5xl leading-12 xl:text-[120px] xl:leading-30 tracking-[-7%] translate-y-1/2 transition-all duration-1000 ease-in-out
               ${isHoveredRight ? 'left-8' :
                 isHoveredLeft ? 'left-full -translate-x-full -ml-8' :
                   'left-1/2 -translate-x-1/2'}
