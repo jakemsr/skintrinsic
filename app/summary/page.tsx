@@ -220,7 +220,7 @@ export default function Summary() {
   }, []);
 
   return (
-    <div className="relative flex flex-col max-h-240 h-dvh w-screen max-w-[1920px] overflow-y-auto bg-[#fcfcfc] text-[#1a1b1c] overflow-x-hidden">
+    <div className="relative flex flex-col h-dvh w-screen overflow-y-auto bg-[#fcfcfc] text-[#1a1b1c] overflow-x-hidden">
       <div>
         <NavBar code={false} location="analysis" />
       </div>

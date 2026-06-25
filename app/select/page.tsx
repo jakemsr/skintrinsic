@@ -44,7 +44,7 @@ export default function Select() {
 
 
   return (
-    <div className="relative flex flex-col h-dvh max-h-240 w-screen max-w-[1920px] overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
+    <div className="relative flex flex-col h-dvh w-screen overflow-x-hidden overflow-y-hidden bg-[#fcfcfc] text-[#1a1b1c]">
       <NavBar code={false} location="analysis" />
 
       <div className="w-56.75 h-6 uppercase font-semibold text-base leading-6 tracking-[-2%] ml-8 mt-4">
