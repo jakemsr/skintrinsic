@@ -28,7 +28,7 @@ export default function Home() {
         <div className="relative flex w-full items-start -translate-y-30 xl:items-center xl:translate-y-0 justify-between">
 
           <div className={`hidden xl:block relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredRight && 'opacity-0'}`}>
-            <div className="relative w-screen h-screen">
+            <div className="relative top-1/2 -translate-y-1/2 w-screen h-screen">
               <img
                 src="/testing-inner-rect.svg"
                 alt=""
@@ -87,7 +87,7 @@ export default function Home() {
 
 
           <div className={`hidden xl:block relative w-75.25 h-150.5 transition-opacity duration-500 ${isHoveredLeft && 'opacity-0'}`}>
-            <div className="relative w-screen h-screen">
+            <div className="relative top-1/2 -translate-y-1/2 w-screen h-screen">
               <img
                 src="/testing-inner-rect.svg"
                 alt=""
