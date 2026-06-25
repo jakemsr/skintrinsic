@@ -272,7 +272,7 @@ export default function Summary() {
         If A.I. estimate is wrong, select the correct one.
       </div>
 
-      <div className="flex h-24 mb-2 p-8 justify-between items-center">
+      <div className="flex h-24 mb-2 p-8 justify-between items-center mt-auto">
 
         <div className="">
           <Link href="/select">
