@@ -224,6 +224,8 @@ export default function Result() {
                 ref={webcamRef}
                 screenshotFormat="image/jpeg"
                 mirrored={true}
+                width={dimensions.width}
+                height={dimensions.height}
                 videoConstraints={videoConstraints}
                 onUserMedia={() => {setCameraReady(true); startRotateWarning()}}
               />
@@ -269,7 +271,7 @@ export default function Result() {
                     <>
                       <img
                         src={imgSrc}
-                        className="absolute top-0 left-0"
+                        className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2"
                       />
 
                       <div
