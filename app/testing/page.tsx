@@ -152,7 +152,7 @@ export default function Testing() {
                         onKeyDown={(e) => handleKeyDown(e, Inputs.name)}
                         autoFocus
                         value={name}
-                        size={13}
+                        size={16}
                         className="border-0 border-b focus:outline-none text-center placeholder:text-[#1a1b1c] placeholder:opacity-100"
                       />
                     ) : (
@@ -163,7 +163,7 @@ export default function Testing() {
                         onKeyDown={(e) => handleKeyDown(e, Inputs.location)}
                         autoFocus
                         value={location}
-                        size={16}
+                        size={19}
                         className="border-0 border-b focus:outline-none text-center placeholder:text-[#1a1b1c] placeholder:opacity-100"
                       />
                     )}
