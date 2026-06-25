@@ -330,8 +330,8 @@ export default function Result() {
             </div>
 
             <div className="absolute inset-0 w-full flex items-center justify-between">
-
-              <div className="relative w-130 h-120.5 ml-8">
+              <div></div>
+              <div className="relative w-130 h-120.5">
                 <img src="/result-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_75s_linear_infinite]" />
                 <img src="/result-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]" />
                 <img src="/result-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
@@ -352,7 +352,7 @@ export default function Result() {
                 </div>
               </div>
 
-              <div className="relative w-130 h-120.5 ml-8">
+              <div className="relative w-130 h-120.5">
                 <img src="/result-inner-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_75s_linear_infinite]" />
                 <img src="/result-mid-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_60s_linear_infinite]" />
                 <img src="/result-outer-rect.svg" alt="" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-[spin_50s_linear_infinite]" />
@@ -380,7 +380,7 @@ export default function Result() {
                 />
 
               </div>
-
+              <div></div>
             </div>
 
             {displayAllowCamera && (
