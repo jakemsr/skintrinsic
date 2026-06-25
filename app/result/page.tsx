@@ -386,7 +386,7 @@ export default function Result() {
             </div>
 
             {displayAllowCamera && (
-              <div className="absolute top-1/2 -translate-y-1/2 left-1/3 w-88 h-34 mr-2 font-semibold uppercase bg-[#1a1b1c] text-[#fcfcfc]">
+              <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 xl:left-1/3 xl:translate-x-0 w-88 h-34 font-semibold uppercase bg-[#1a1b1c] text-[#fcfcfc]">
                 <div className="mt-2 mx-2">
                   Allow A.I. to access your camera
                 </div>
